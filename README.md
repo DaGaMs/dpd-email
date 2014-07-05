@@ -1,4 +1,4 @@
-dpd-email
+dpd-email-mu
 =========
 
 A simple DPD resource for sending emails using nodemailer and mu2 templates.
@@ -8,16 +8,14 @@ This Deployd resource is an alternative to the [dpd-email](https://github.com/de
 Here is an example event script:
 
 ```node
-if (!body.email) {
-    cancel("No recipient address provided", 400);
+if (!body.email) cancel("No recipient address provided", 400);
 
 /** Imagine a template like this:
 
 Hi, {{userName}}, wellcome to dpd-email!
 
 */
-var view = {  userName: body.userName
-        };
+var view = {  userName: body.userName };
 var renderedText = '';
 
 mustache.renderText(template, view)
