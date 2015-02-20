@@ -1,6 +1,6 @@
 {
   "name": "dpd-email",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A resource type to send emails",
   "main": "index.js",
   "author": "Benjamin Schuster-Boeckler",
