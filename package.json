@@ -6,7 +6,7 @@
   "author": "Benjamin Schuster-Boeckler",
   "license": "BSD",
   "dependencies": {
-    "nodemailer": "~0.7.x",
-    "mu2": "~0.5.20"
+    "nodemailer": "~0.7.x"
+   ,"mu2": "~0.5.20"
   }
 }

@@ -29,7 +29,11 @@ EmailResource.basicDashboard = {
     , type: 'text'
     , description: 'Password for authentication'
   }, {
-      name: "template"
+      name: "textTemplate"
+    , type: 'textarea'
+    , description: 'Email template'
+  }, {
+      name: "htmlTemplate"
     , type: 'textarea'
     , description: 'Email template'
   }, {
@@ -78,7 +82,8 @@ EmailResource.prototype.handle = function (ctx, next) {
             }
             , mailer: smtpTransport
             , mustache: mu
-            , template: this.config.template
+            , textTemplate: this.config.textTemplate
+            , htmlTemplate: this.config.htmlTemplate
         };
 
         this.events.post.run(ctx, domain, function(err) {
